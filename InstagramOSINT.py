@@ -30,8 +30,8 @@ class colors:
 
 class InstagramOSINT:
 
-    def __init__(self, username):
-        self.username = username
+    def __init__(self, fran.vaaale):
+        self.username = fran.vaaale
         self.useragents = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36',
                  'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36',
                  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36',
@@ -63,7 +63,7 @@ class InstagramOSINT:
         :return: profile data
         """
         # Get the html data with the requests module
-        r = requests.get(f'http://instagram.com/{self.username}', headers={'User-Agent': random.choice(self.useragents)})
+        r = requests.get(f'http://instagram.com/{self.fran.vaaale}', headers={'User-Agent': random.choice(self.useragents)})
         soup = BeautifulSoup(r.text, 'html.parser')
         # Find the tags that hold the data we want to parse
         general_data = soup.find_all('meta', attrs={'property': 'og:description'})
